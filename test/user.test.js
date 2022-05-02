@@ -1,12 +1,16 @@
 const User = require("./../app/models/user")
-describe("Prueba de jest", () => {
-    test("Prueba 1", ()=> {
+describe("Test para User", () => {
+    test("Requerimiento 1: Creacion de User", ()=> {
         const user = new User(1, "joseanaya", "Jose", "Bio", "dateCreated", "lastUpdate")
         expect(user.id).toBe(1)
         expect(user.userName).toBe("joseanaya")
         expect(user.name).toBe("Jose")
         expect(user.bio).toBe("Bio")
-        expect(user.dateCreated).toBe("dateCreated")
-        expect(user.lastUpdate).toBe("lastUpdate")
+    })
+
+    test("Requerimiento 2: Fechas en atributos de User", () => {
+        const user = new User(1, "joseanaya", "Jose", "Bio")
+        expect(user.dateCreated).not.toBeUndefined()
+        expect(user.lastUpdate).not.toBeUndefined()
     })
 })
