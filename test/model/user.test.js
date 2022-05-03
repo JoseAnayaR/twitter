@@ -1,4 +1,4 @@
-const User = require("./../app/models/user")
+const User = require("../../app/models/user")
 describe("Test para User", () => {
     test("Requerimiento 1: Creacion de User", ()=> {
         const user = new User(1, "joseanaya", "Jose", "Bio", "dateCreated", "lastUpdate")
