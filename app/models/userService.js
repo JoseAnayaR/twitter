@@ -7,6 +7,9 @@ class userService {
     static getInfo(user){
         return Object.values(user)
     }
+    static updateUserUserName(user, UserName){
+        user.userName = UserName
+    }
 }
 
 module.exports = userService
